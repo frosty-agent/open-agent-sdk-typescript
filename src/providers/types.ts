@@ -12,7 +12,7 @@
 // API Type
 // --------------------------------------------------------------------------
 
-export type ApiType = 'anthropic-messages' | 'openai-completions'
+export type ApiType = 'anthropic-messages' | 'openai-completions' | 'openrouter'
 
 // --------------------------------------------------------------------------
 // Normalized Request
@@ -63,6 +63,8 @@ export interface CreateMessageResponse {
   usage: {
     input_tokens: number
     output_tokens: number
+    /** Actual provider-reported request cost in USD, when available. */
+    cost?: number
     cache_creation_input_tokens?: number
     cache_read_input_tokens?: number
   }

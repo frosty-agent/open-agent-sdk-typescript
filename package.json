@@ -38,6 +38,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "0.52.0",
     "@modelcontextprotocol/sdk": "1.29.0",
+    "@openrouter/sdk": "0.13.48",
     "zod": "3.25.76",
     "zod-to-json-schema": "3.25.2"
   },

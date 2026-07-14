@@ -52,13 +52,14 @@ export type { McpSdkServerConfig } from './sdk-mcp-server.js'
 export { QueryEngine } from './engine.js'
 
 // --------------------------------------------------------------------------
-// LLM Providers (Anthropic + OpenAI)
+// LLM Providers (Anthropic + OpenAI + OpenRouter)
 // --------------------------------------------------------------------------
 
 export {
   createProvider,
   AnthropicProvider,
   OpenAIProvider,
+  OpenRouterProvider,
 } from './providers/index.js'
 export type {
   ApiType,
@@ -69,6 +70,9 @@ export type {
   NormalizedContentBlock,
   NormalizedTool,
   NormalizedResponseBlock,
+  OpenRouterClient,
+  OpenRouterChatResponse,
+  OpenRouterProviderOptions,
 } from './providers/index.js'
 
 // --------------------------------------------------------------------------
