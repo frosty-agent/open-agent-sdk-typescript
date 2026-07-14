@@ -122,7 +122,7 @@ export class Agent {
     const envType =
       this.cfg.env?.CODEANY_API_TYPE ??
       this.readEnv('CODEANY_API_TYPE')
-    if (envType === 'openai-completions' || envType === 'anthropic-messages') {
+    if (envType === 'openai-completions' || envType === 'anthropic-messages' || envType === 'openrouter') {
       return envType
     }
 

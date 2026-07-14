@@ -25,7 +25,7 @@ import type { OpenRouterProviderOptions } from './openrouter.js'
  */
 export function createProvider(
   apiType: ApiType,
-  opts: { apiKey?: string; baseURL?: string } | OpenRouterProviderOptions,
+  opts: { apiKey?: string; baseURL?: string; provider?: Record<string, unknown> } | OpenRouterProviderOptions,
 ): LLMProvider {
   switch (apiType) {
     case 'anthropic-messages':
