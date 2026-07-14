@@ -26,23 +26,25 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "npx tsx examples/01-simple-query.ts",
+    "test": "node --test test/**/*.test.mjs",
     "test:all": "for f in examples/*.ts; do echo \"--- Running $f ---\"; npx tsx $f; echo; done",
-    "web": "npx tsx examples/web/server.ts"
+    "web": "npx tsx examples/web/server.ts",
+    "test:examples": "for f in examples/*.ts; do echo \"--- Running $f ---\"; npx tsx \"$f\"; echo; done",
+    "ci": "npm run build && npm test"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.52.0",
-    "@modelcontextprotocol/sdk": "^1.12.1",
-    "zod": "^3.23.0",
-    "zod-to-json-schema": "^3.24.0"
+    "@anthropic-ai/sdk": "0.52.0",
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "zod": "3.25.76",
+    "zod-to-json-schema": "3.25.2"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
-    "tsx": "^4.19.0",
-    "typescript": "^5.7.0"
+    "@types/node": "22.20.1",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3"
   },
   "keywords": [
     "open-agent-sdk",
